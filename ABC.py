@@ -380,35 +380,243 @@ class Death(Scene):
         print Death.quips[randint(0, len(self.quips)-1)]
         exit(1)
 		
+
+
+# This is a game that should play from both first person and top down view?
+# Think Zelda (some scenes require top down view like when in a building)
+# There should be a home screen to show your inventory (IE: green, yellow rings) 
+		
+# First Scene
+# Introduction to Digory and Polly
+# Digory has to find Polly to unlock the next Scene
+# If Digory cannot find Polly he will break down and cry
+# If Digory tries to leave from the gate which he came in from, he will return to same Scene
+
 class Gardens(Scene):
 
-	def enter(self):
-		pass
+	def enter(self, Polly):
+		print "You 'Digory' have moved into the city and need to find a friend to play with"
 		
+		if find friend
+			print "Why are you sad Digory? Don't you want to play?
+			
+			#How to include an action and sound effect?		
+			action == door unlocks, sound effect
+			
+			#How to use key strokes walk to door?
+			#Is it okay if I use an If statment inside of another If statment?
+			#Is there a better way?
+			raw_input == ("> ")
+			if raw_input == "new door"
+				# key music and switch to next_scene
+				next_scene(<self, Polly>, <Attic>)
+				
+			#Is it okay if I just run Pass on both?
+			elif pass
+			else pass
+		
+		elif exit scene then return to Scene
+		
+		else 
+			pass
+		
+
 class Attic(Scene):
 
-	def enter(self):
-		pass
+	def enter(self, Polly):
+		print Digory says: "What is this place?"
+		print Polly replies: "I'm not sure but I think we are inbetween the houses in
+		print "some kind of secret passage way to the Attic."
+		print Digory says: "What a creepy place to be!"
+		print Polly replies: "Yeah I am starting to feel chills!...(Hears Sound)
+		print "WHAT's THAT NOISE!"
 		
+		# Digory and Polly are both breathing heavily now.
+		# Every 15 seconds Polly or Digory (alternating) say "I'm Scared"
+		# If both of them do not move within 30 seconds then Digory starts crying!"
+		# Think "Left for dead" creepy feeling.
+		
+		# They must find a vase with key inside to unlock a locked door at the end of the
+		# attic. 
+		# This requires a grab function, equip function, and use function.
+		# Zelda type functions
+		
+		raw_input == ('> ')
+		if raw_input == grab vase
+			print "You have found a key (play sound effect and show key)"
+		elif raw_input == grab vase (empty)
+			print "There used to be something important in here."
+		else 
+			pass
+		
+		# only if found key then can go to inventory to equip it
+		# only if key is equiped then can use it
+		if key is equiped and raw_input == open door
+			print "This key seems to fit perfectly"
+			# There should be a visual/sound effect of door unlocking.
+			# Switch to next scene
+			next_scene(<self, Polly>, <StudyRoom>)
+			
+		elif key is not equiped and raw_input == open door
+			print "You need something to unlock this door."
+		else 
+			pass
+			
+# Polly and Digory are in a passage and know how to get home but see a dim light from
+# underneath a strange door. (The StudyRoom)			
 class StudyRoom(Scene):
 
-	def enter(self):
-		pass
+	def enter(self, Polly, Uncle Andrew):
+		print "Oh I know where we are says Digory!"
+		print "Hey whats the light coming from that door? says Polly"
+		print "Digory replies: 'Lets go look'"
+		
+		raw_input == ('> ')
+		if raw_input == open door
+			print "Polly and Digory quietly opened the door and saw Uncle Andrew!"
+			print "Before they could say anything they saw two guinea pigs vanish into"
+			print "'thin air'!"
+			print "Uncle Andrew! Digory exclaims; and before he relised it Uncle Andrew had"
+			print "a hold of both of them!"
+			print "OH PERFECT! Uncle Andrew says with a mysterious laugh."
+			print "I have a present for both of you. Uncle Andrew hands them a cloth with"
+			print "something inside."
+			print "Polly was more eager than Digory thus she opened it first and saw a"
+			print "shiny yellow ring."
+			print "When she touched it she vasnished into 'thin air' just like the" 
+			print "guinea pigs."
+			print "Digory was shocked and scared by what he just saw!"
+			print "Digory was about to inquire as Uncle Andrew began to explain: If you"
+			print "ever want to see her or the two guinea pigs again you must take this"
+			print "yellow ring to go to where she has gone and take these two green rings"
+			print "to come back!"
+		
+		# to prevent a bug there should be a way to prevent from leaving the room without
+		# having completed the mission at hand. IE: returning with the Witch
+		
+				raw_input == ('> ')
+			if raw_input == equip yellow ring
+				print "Digory finds himself in a wormhole and within mere seconds he falls"
+				print "on soft grass.
+					next_scene(<self,Polly>, <Sleepywoods>)
+			elif raw_input == equip green ring
+				print "That is strange nothing happened." 		
+			else 
+				pass
+				
+			
+		#action is wrong so should take them back to the Attic scene
+		elif raw_input != open door
+			print "That's strange how did we get here?"
+		else
+			pass
 
 class Sleepywoods(Scene):
 
-	def enter(self):
-		pass
+	def enter(self, Polly, 2 guinea pigs):
+		if found Polly
+			print Digory "Polly is that you!? I have been looking all over for you."
+			print Digory "Wake up Polly do not fall asleep again!"
+			print Polly "Where are we?"
+			print Digory "I do not know but Uncle Andrew tricked us and now I am here to
+			print Digory " take you back!"
+			print Polly "Okay! but let us take a look around first before we go back."
+			print Digory "what are all of these pools?"
+			print Polly "I don't know but I think they lead to another world. As if we
+			print Polly "are in a woods between worlds."
+			
+			raw_input == ('> ')
+		if raw_input == jump in pool
+			print "AHHHHHH! There is darkness, and then slowly there is light!"
+			next_scene(<self, Polly>, <AbandonedcityFrozen>)
+		elif
+			pass
+		else
+			pass
 
 class AbandonedcityFrozen(Scene):
 
-	def enter(self):
-		pass
-
-class AbandonedcityUnfrozen(Scene):
-
-	def enter(self):
-		pass
+	def enter(self, Polly, Witch):
+		print Digory "Wow this place is cold and it looks like everything is dead!"
+		print Polly "Maybe there are people inside the city because it is so cold outside?"
+		print Polly "Lets go in to check, unless you are scared and want to go back?"
+		print Digory "No I am not scared, unless you are scared?"
+		print Polly "No I am not scared."
+		print Digory "Lets go inside then."
+		
+		# I am trying to include more choices for a better UX
+		# How to allow free movement and exploration within each scene?
+		# Does my raw input have to be so 'Limited'?
+		# How do I include more sideline stories to make the game seem less linear?
+		raw_input == ('> ')
+		if raw_input == 'walk into city'
+			action == go to the city center
+			print "There seems to be something wrong with this city, everything is so quiet"
+			print "It seems like everything is dead."
+			print "There is a big dining room up ahead."
+			print "Maybe there is someone there."
+			
+			
+			
+			raw_input == ('> ')
+			if raw_input == 'dinning room'
+				# there should be a change in visual/sound effect when entering room
+				action == walk into dining room
+				print Digory "Wow look Polly, what happened here!?"
+				print Digory "Why are there statues sitting at the dinning table?"
+				print Polly "I do not know but it seems like they were alive"
+				print Polly "and became frozen instantly."
+				print Polly "The head of the table seems to be happy but"
+				print Polly "the farther you go down the sadder they look."
+				print Digory "Look at that beautiful lady at the end! She must be the queen."
+				
+				# How can you put an object in plane sight, waiting for impulse to enacted
+				# upon. IE: Zelda you can click to read a sign and then after 
+				# you can perform an action to unlock that puzzle
+				print Polly "Look here Digory, there is a hammer with a bell and this"
+				print Polly "sign says 'Those who dare to strike the bell"
+				print Polly "or else you will go to hell'."
+			elif
+				pass
+			else
+				pass
+				
+				
+				raw_input == ('> ')
+				if raw_input == 'ring bell'
+					print "Despite protests from Polly, Digory rings the bell."
+					print "The ground began to shake and there were strange lights in"
+					print "the sky. Before Polly and Digory could run out of there one"
+					print "of the statues began to move.
+					print "It was the queen. She slowly came to life and seemed to be
+					print "Taller and Stronger than Digory had imagined before!
+					print Witch "Who has rung the bell and awakened me from my slumber!?"
+					print Witch "Where is my faithful servant?"
+					print "Digory stepped out into the light, trembling with fear."
+					print "He thought he might get a prize from this awe powerful queen."
+					print Witch "Well, well what do we have here, a child it seems."
+					print Witch "Where is your offering, lest I might eat you?"
+					print Digory "I don't know about offering but here is my friend Polly"
+					print Witch "Oh so you want me to eat your friend!?"
+					print Digory "No, No! I mean I am the one who rang the bell 
+					print Digory "even though she told me not to."
+					print Witch "So I should eat her because she is defiant!"
+					print Polly "No please don't eat me!"
+					print Digory "No my queen I can go get food and bring it back for you."
+					print "Digory and Polly knew that they must leave immediately"
+					print "before something bad happens to either of them!"
+					print "They both reached into their pockets at the same time,"
+					print "but before they could touch their green rings the Queen grabbed
+					print "them both by their coats!"
+					print "AHHH!"
+					next_scene(<self, Polly, Witch>, <StudyRoom>)		
+				raw_input == ('> ')
+				
+				
+		elif
+			pass
+		else
+			pass
 		
 class StudyRoom(Scene):
 
