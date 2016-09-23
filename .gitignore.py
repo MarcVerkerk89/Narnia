@@ -1,6 +1,5 @@
-*.pyc
-__pycache__
-Chronicles
-.DS_Store
 .gitignore.py
-db.sqlite3
+*pyc
+__pycache
+.DS_store
+Chronicles
